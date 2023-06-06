@@ -67,8 +67,6 @@ int registro() // Função responsável por cadastrar usuários no sistema
 	fprintf(file,cargo);
 	fclose(file);
 	
-	system("pause");
-	
 }
 int consulta() // Função responsável por consultar usuários no sistema
 {
@@ -136,6 +134,7 @@ int main()
 {
 	int opcao = 0;
 	int laco_programa = 1;
+	int opcao_cadastro = 0;
 	
 	// Laço p/ não desligar o programa abruptamente a qualquer escolha feita pelo usuário
 	for(laco_programa = 1;laco_programa = 1;)
@@ -169,6 +168,30 @@ int main()
 		{
 			case 1:
 				registro(); //chamada de funções
+				printf("\n\t\t---------------------------------\n");
+				printf("\t\t|Cadastro realizado com sucesso!|\n");
+				printf("\t\t---------------------------------\n\n");
+				printf("------------- Se você deseja: --------------\n");
+				printf("a) Voltar ao menu -> Digite (1)\n");
+				printf("b) Adicionar um novo cadastro -> Digite (2)\n");
+				printf("--------------------------------------------\n");
+				scanf("%d",&opcao_cadastro);
+				system("cls");
+				
+				//Estrutura para o usuario decidir se a) Volta para o menu ou b) Cadastra um novo cpf
+				while (opcao_cadastro == 2){
+					registro();
+					printf("\n\t\t---------------------------------\n");
+					printf("\t\t|Cadastro realizado com sucesso!|\n");
+					printf("\t\t---------------------------------\n\n");
+					printf("------------- Se você deseja: --------------\n");
+					printf("a) Voltar ao menu -> Digite (1)\n");
+					printf("b) Adicionar um novo cadastro -> Digite (2)\n");
+					printf("--------------------------------------------\n");
+					scanf("%d",&opcao_cadastro);
+					system("cls");
+				}
+				
 			break;
 		
 			case 2:
