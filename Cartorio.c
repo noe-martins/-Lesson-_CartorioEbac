@@ -154,6 +154,7 @@ int main()
 		printf("\t1 - Registrar nomes\t\t|\n");
 		printf("\t2 - Consultar nomes\t\t|\n");
 		printf("\t3 - Deletar nomes\t\t|\n");
+		printf("\t4 - Sair do Programa\t\t|\n");
 		printf("\t\t\t\t\t|\n");
 		printf("----------------------------------------\n\n");
 		//printf("*Esse Software é de livre uso do aluno*\n");
@@ -178,6 +179,11 @@ int main()
 				deletar();
 			break;
 		
+			case 4:
+				printf("Obrigado por utilizar o sistema!\n");
+				return 0;
+			break;
+			
 			default:
 				printf("Essa opção não está disponível\n\n");
 				system("pause");
